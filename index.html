@@ -3,499 +3,578 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Jagmohan Singh | A3 Nursing Resume</title>
+  <title>Jagmohan Singh | Dialysis Nurse Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Nova+Square&display=swap" rel="stylesheet">
   <style>
     :root {
-      --a3-width: 1122px;
-      --a3-height: 1587px;
-      --sheet-scale: 1;
-      --paper: #f8f5ef;
-      --paper-soft: #fcfbf8;
-      --body-bg: #d8d4cc;
-      --ink: #1d2b36;
-      --muted: #44515c;
-      --gold: #8f7a5b;
-      --gold-light: #d8c7a1;
-      --navy: #20323f;
-      --border: #d8d0c4;
+      --blue: #075f7d;
+      --dark: #263238;
+      --text: #33383d;
+      --muted: #626b73;
+      --line: #dfe5e8;
+      --side: #f3f5f6;
+      --paper: #ffffff;
+      --bg: #e9edf0;
     }
 
     * {
       box-sizing: border-box;
-      -webkit-text-size-adjust: 100%;
-      text-size-adjust: 100%;
+      font-family: 'Jost', Arial, Helvetica, sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
     }
 
-    html,
-    body {
+    html, body {
       margin: 0;
-      min-height: 100%;
-      background: var(--body-bg);
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--muted);
+      padding: 0;
+      min-width: 210mm;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Jost', Arial, Helvetica, sans-serif !important;
+      font-size: 14.8px;
+      line-height: 1.34;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
-    body {
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .viewport {
-      width: 100%;
-      min-height: 100vh;
-      padding: 24px 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    .sheet-frame {
-      width: calc(var(--a3-width) * var(--sheet-scale));
-      height: calc(var(--a3-height) * var(--sheet-scale));
-      position: relative;
-      flex: 0 0 auto;
-    }
-
-    .a3-sheet {
-      width: var(--a3-width);
-      min-height: var(--a3-height);
-      position: absolute;
-      inset: 0 auto auto 0;
-      transform: scale(var(--sheet-scale));
-      transform-origin: top left;
-      background: var(--paper);
-      border: 1px solid var(--border);
-      box-shadow: 0 22px 60px rgba(28, 34, 38, 0.24);
-      padding: 46px;
+    .page {
+      width: 210mm;
+      min-width: 210mm;
+      max-width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 16px auto;
+      background: var(--paper) !important;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
       overflow: hidden;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
-    .serif {
-      font-family: Georgia, "Times New Roman", serif;
+    .header {
+      flex: 0 0 23mm;
+      position: relative;
+      background: var(--blue) !important;
+      color: #ffffff !important;
+      padding: 13px 20px 11px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
-    .eyebrow {
-      margin: 0 0 8px;
-      font-size: 10px;
-      line-height: 16px;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-      color: var(--gold);
+    .header h1 {
+      margin: 0;
+      font-family: 'Nova Square', 'Jost', Arial, Helvetica, sans-serif !important;
+      font-size: 34px;
+      line-height: 1.05;
+      letter-spacing: 0.2px;
       font-weight: 700;
     }
 
-    .hero {
-      height: 222px;
+    .header p {
+      margin: 5px 0 0;
+      color: #e2f2f6;
+      font-size: 16.3px;
+    }
+
+    .resume-actions {
+      position: absolute;
+      top: 11px;
+      right: 12px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .resume-actions button {
+      border: 0;
+      background: #ffffff;
+      color: var(--blue);
+      padding: 6px 11px;
+      border-radius: 5px;
+      font-size: 11.8px;
+      cursor: pointer;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+    }
+
+    .layout {
+      flex: 1 1 auto;
+      min-height: 0;
+      width: 210mm;
       display: grid;
-      grid-template-columns: 1.58fr 1fr;
-      gap: 28px;
-      align-items: stretch;
-      padding: 34px 38px;
-      color: #fff;
-      background-color: var(--navy);
-      background-image: linear-gradient(rgba(17, 28, 35, 0.76), rgba(17, 28, 35, 0.76)), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-      border: 1px solid #13242f;
+      grid-template-columns: 146mm 64mm;
     }
 
-    .hero .eyebrow {
-      color: var(--gold-light);
+    .main {
+      width: 146mm;
+      padding: 10mm 7mm 7mm 8mm;
+      min-width: 146mm;
+      max-width: 146mm;
+      display: block;
     }
 
-    .name {
-      margin: 0;
-      font-size: 45px;
-      line-height: 48px;
-      color: #fff;
-      letter-spacing: 0.2px;
-    }
-
-    .headline {
-      max-width: 650px;
-      margin: 13px 0 0;
-      font-size: 15px;
-      line-height: 24px;
-      color: #eef2f3;
-    }
-
-    .contact-card {
-      align-self: start;
-      justify-self: end;
-      min-width: 330px;
-      padding: 15px 18px;
-      border: 1px solid rgba(255, 255, 255, 0.27);
-      background: rgba(248, 245, 239, 0.11);
-      font-size: 13px;
-      line-height: 23px;
-      text-align: right;
-      color: #fff;
+    .sidebar {
+      width: 64mm;
+      min-width: 64mm;
+      max-width: 64mm;
+      background: var(--side) !important;
+      padding: 10mm 5mm 7mm 5mm;
+      display: block;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
     }
 
     .section {
-      margin-top: 18px;
+      margin-bottom: 10px;
+      break-inside: avoid;
+    }
+
+    .section-title,
+    .side-block h2 {
+      margin: 0 0 6px;
+      font-family: 'Nova Square', 'Jost', Arial, Helvetica, sans-serif !important;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.15;
+      font-weight: 700;
     }
 
     .summary {
-      padding: 20px 24px 22px;
-      background: var(--paper-soft);
-      border: 1px solid var(--border);
-    }
-
-    h2,
-    h3 {
       margin: 0;
-      color: var(--ink);
+      text-align: justify;
+      color: #3d4246;
+      font-size: 14.2px;
+      line-height: 1.34;
     }
 
-    h2 {
-      font-size: 28px;
-      line-height: 33px;
-    }
-
-    h3 {
-      font-size: 21px;
-      line-height: 27px;
-    }
-
-    p {
-      margin: 0;
-      font-size: 13.2px;
-      line-height: 21px;
-    }
-
-    .summary p {
-      margin-top: 10px;
-      font-size: 13.5px;
-      line-height: 22px;
-    }
-
-    .two-column {
+    .entry {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: 19mm 1fr;
+      gap: 7px;
+      margin-bottom: 10px;
+      break-inside: avoid;
     }
 
-    .card {
-      background: var(--paper-soft);
-      border: 1px solid #ddd5c9;
-      padding: 20px 22px 18px;
+    .date {
+      font-size: 12.7px;
+      color: var(--muted);
+      line-height: 1.22;
     }
 
-    .card.dark {
-      background: var(--navy);
-      border-color: var(--navy);
-      color: #dbe3e8;
+    .entry h3,
+    .box h3 {
+      margin: 0;
+      font-family: 'Jost', Arial, Helvetica, sans-serif !important;
+      font-size: 15px;
+      color: var(--dark);
+      font-weight: 700;
     }
 
-    .card.tan {
-      background: #f2ede4;
-    }
-
-    .card.dark h3,
-    .card.dark h2 {
-      color: #fff;
-    }
-
-    .card.dark .eyebrow {
-      color: var(--gold-light);
-    }
-
-    .small-note {
-      margin-top: 8px;
-      font-size: 11px;
-      line-height: 18px;
-      color: #7a6a52;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .company {
+      margin: 2px 0 4px;
+      font-size: 13.1px;
+      color: #515a61;
+      font-style: italic;
     }
 
     ul {
-      margin: 11px 0 0;
+      margin: 0 0 0 15px;
       padding: 0;
-      list-style: none;
-      font-size: 12.8px;
-      line-height: 21px;
     }
 
     li {
-      position: relative;
-      padding-left: 15px;
-    }
-
-    li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    .experience-title {
-      margin: 0 0 12px;
-    }
-
-    .job {
-      background: #fbfaf7;
-      border: 1px solid #ddd5c9;
-      border-top: 4px solid var(--gold);
-      padding: 20px 22px 18px;
-      margin-top: 14px;
-    }
-
-    .job.secondary {
-      border-top-color: #c7b79b;
-    }
-
-    .job h3 {
-      font-size: 23px;
-      line-height: 28px;
-    }
-
-    .meta {
-      margin-top: 7px;
-      font-size: 11.4px;
-      line-height: 18px;
-      color: #7a6a52;
-      text-transform: uppercase;
-      letter-spacing: 1.05px;
-      font-weight: 700;
-    }
-
-    .job ul {
-      margin-top: 10px;
-      font-size: 12.45px;
-      line-height: 19px;
-    }
-
-    .bottom-grid {
-      display: grid;
-      grid-template-columns: 1.08fr 1fr;
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .closing {
-      margin-top: 18px;
-      padding-top: 18px;
-      border-top: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 22px;
-      align-items: center;
-    }
-
-    .closing p {
+      margin-bottom: 3.8px;
       font-size: 13px;
-      line-height: 21px;
+      line-height: 1.27;
+      color: #3e4449;
     }
 
-    .button {
-      display: inline-block;
-      padding: 14px 26px;
-      background: var(--gold);
-      color: #fff;
-      font-size: 12px;
-      line-height: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-weight: 700;
+    .side-block {
+      margin-bottom: 10px;
+      break-inside: avoid;
+    }
+
+    .info {
+      margin: 0 0 7px;
+      font-size: 13.1px;
+      color: #464d53;
+      line-height: 1.26;
+      overflow-wrap: normal;
+    }
+
+    .email-line {
+      display: block;
       white-space: nowrap;
+      font-size: 11.65px;
+      letter-spacing: -0.8px;
+      line-height: 1.25;
     }
 
-    .print-hint {
-      position: fixed;
-      right: 16px;
-      bottom: 16px;
-      padding: 10px 12px;
-      background: rgba(32, 50, 63, 0.92);
-      color: #fff;
-      border-radius: 999px;
-      font-size: 12px;
-      line-height: 16px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+    .info strong {
+      display: block;
+      margin-bottom: 1px;
+      color: var(--dark);
+      font-size: 13.1px;
     }
+
+    a { color: inherit; text-decoration: none; }
+
+    .plain-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .plain-list li {
+      margin-bottom: 4.5px;
+      font-size: 12.8px;
+      line-height: 1.23;
+    }
+
+    .two-col-list {
+      columns: 2;
+      column-gap: 16px;
+      margin-left: 16px;
+    }
+
+    .two-col-list li {
+      break-inside: avoid;
+      margin-bottom: 4.6px;
+    }
+
+    .simple-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px 13px;
+    }
+
+    .box {
+      border: 1px solid var(--line);
+      padding: 9px 9px;
+      background: var(--side);
+      break-inside: avoid;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .box p {
+      margin: 3px 0 0;
+      font-size: 12.9px;
+      line-height: 1.25;
+      color: #3e4449;
+    }
+
+    .page-1 .section:last-child,
+    .page-2 .section:last-child,
+    .sidebar .side-block:last-child { margin-bottom: 0; }
 
     @page {
-      size: A3 portrait;
+      size: A4 portrait;
       margin: 0;
     }
 
     @media print {
-      :root {
-        --sheet-scale: 1 !important;
+      *,
+      *::before,
+      *::after {
+        font-family: 'Jost', Arial, Helvetica, sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: geometricPrecision;
+      }
+
+      .header h1,
+      .section-title,
+      .side-block h2 {
+        font-family: 'Nova Square', 'Jost', Arial, Helvetica, sans-serif !important;
       }
 
       html,
       body {
-        width: 297mm;
-        height: 420mm;
-        background: #fff;
+        width: 210mm;
+        min-width: 210mm;
+        height: auto;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: #ffffff;
+        font-family: 'Jost', Arial, Helvetica, sans-serif !important;
       }
 
-      .viewport {
-        display: block;
-        padding: 0;
-        min-height: 0;
+      .resume-actions {
+        display: none !important;
       }
 
-      .sheet-frame {
-        width: 297mm;
-        height: 420mm;
+      .page {
+        width: 210mm !important;
+        min-width: 210mm !important;
+        max-width: 210mm !important;
+        height: 297mm !important;
+        min-height: 297mm !important;
+        max-height: 297mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        overflow: hidden !important;
+        break-after: page;
+        page-break-after: always;
       }
 
-      .a3-sheet {
-        width: 297mm;
-        min-height: 420mm;
-        transform: none !important;
-        position: static;
-        border: 0;
-        box-shadow: none;
-      }
-
-      .print-hint {
-        display: none;
+      .page:last-of-type {
+        break-after: auto;
+        page-break-after: auto;
       }
     }
   </style>
 </head>
 <body>
-  <div class="viewport">
-    <div class="sheet-frame" id="sheetFrame">
-      <main class="a3-sheet" id="a3Sheet" aria-label="A3 resume sheet">
-        <header class="hero">
-          <section>
-            <p class="eyebrow"></p>
-            <h1 class="name serif">Jagmohan Singh</h1>
-            <p class="headline">Registered Nurse RN (Male) • Dialysis Nurse • Seeking Full-Time Work Opportunities as Registered Nurse</p>
-          </section>
-          <aside class="contact-card">
-            Ludhiana, Punjab, India<br />
-            +91 76260 52289<br />
-            <a href="mailto:Singhjagmohan040@gmail.com">Singhjagmohan040@gmail.com</a><br />
-            Open to Relocation
-          </aside>
-        </header>
+  <main class="page page-1">
+    <header class="header">
+      <h1>Jagmohan Singh</h1>
+      <p>Registered Nurse | Dialysis Nurse | Renal Care</p>
+      <div class="resume-actions" aria-label="Print resume">
+        <button type="button" onclick="window.print()" title="Print both resume pages">Print Resume</button>
+      </div>
+    </header>
 
-        <section class="summary section">
-          <p class="eyebrow">Profile</p>
-          <h2 class="serif">Professional Summary</h2>
-          <p>Compassionate Nursing Professional with a Bachelor of Science in Nursing, more than 2 years of hands-on dialysis unit experience in a multispeciality tertiary care hospital (1626 bedded), and CRNA licence registration number 156107. Strong background in hemodialysis setup and monitoring, CRRT support, vascular access assistance, complication assessment, and patient-focused care in ICU settings. Known for calm clinical judgment, teamwork, reliability, and respectful communication with patients, families, and interdisciplinary teams. Seeking a full-time contract opportunity where strong renal care skills, safe practice, and patient-centred nursing can contribute to a high-quality healthcare team.</p>
+    <section class="layout">
+      <section class="main">
+        <section class="section">
+          <h2 class="section-title">Professional Summary</h2>
+          <p class="summary">
+            Compassionate and highly adaptable Registered Nurse with a Bachelor of Science in Nursing, a CRNA licence from Alberta, and over 2 years of progressive clinical experience in a 1,626-bedded Multispeciality Tertiary Care Hospital. Specialized in renal replacement therapies including Hemodialysis, SLED, CRRT, HDF, and vascular access assistance, with solid general staffing experience across medical-surgical and acute care units. Proficient in patient assessment, IV therapy, medication administration, wound care, and pre/post-procedural nursing, with the ability to prioritize and manage high-acuity patients effectively. Skilled in accurate clinical documentation, discharge planning, and delivering culturally sensitive patient and family education in collaboration with multidisciplinary teams. Recognized for calm clinical judgment under pressure, a proactive approach to patient safety, and an unwavering commitment to evidence-based, patient-centred care.
+          </p>
         </section>
 
-        <section class="two-column section">
-          <article class="card">
-            <p class="eyebrow">Clinical Skills</p>
-            <h3 class="serif">Core Competencies</h3>
-            <p class="small-note">CRNA Licence Registration No. 156107</p>
-            <ul>
-              <li>Hemodialysis machine setup and operation</li>
-              <li>Sustained Low Efficiency Dialysis (SLED)</li>
-              <li>CRRT setup and modality support</li>
-              <li>Hemodiafiltration initiation and termination</li>
-              <li>AV fistula and femoral cannulation support</li>
-              <li>Catheter procedure assistance</li>
-              <li>Caring for critical patients in ICU settings</li>
-            </ul>
-          </article>
-          <article class="card">
-            <p class="eyebrow">Workplace Strengths</p>
-            <h3 class="serif">Professional Strengths</h3>
-            <ul>
-              <li>Patient assessment and monitoring</li>
-              <li>Responding to dialysis and critical complications</li>
-              <li>Interdisciplinary collaboration</li>
-              <li>Patient and family communication</li>
-              <li>Clinical documentation and reporting</li>
-              <li>Safe, organized, compassionate care</li>
-            </ul>
+        <section class="section">
+          <h2 class="section-title">Education</h2>
+          <article class="entry">
+            <div class="date">2016 -<br />2021</div>
+            <div>
+              <h3>Bachelor of Science in Nursing</h3>
+              <p class="company">Shri Guru Ram Dass College of Nursing, Sri Amritsar</p>
+              <ul>
+                <li>Affiliated with Baba Farid University of Health Sciences, Faridkot.</li>
+                <li>Course period: Oct 2016 - Dec 2021 | Degree conferred: Jan 2022.</li>
+                <li>Medium of instruction: English.</li>
+              </ul>
+            </div>
           </article>
         </section>
 
         <section class="section">
-          <div class="experience-title">
-            <p class="eyebrow">Experience</p>
-            <h2 class="serif">Professional Experience</h2>
+          <h2 class="section-title">Professional Experience</h2>
+
+          <article class="entry">
+            <div class="date">Jul 2022 -<br />Nov 2024</div>
+            <div>
+              <h3>Staff Nurse — Dialysis Unit</h3>
+              <p class="company">Dayanand Medical College &amp; Hospital (DMCH), Ludhiana, India</p>
+              <ul>
+                <li>Provided direct nursing care in a 28-bedded dialysis unit during routine and advanced renal replacement therapies.</li>
+                <li>Prepared and operated dialysis machines for hemodialysis, Sustained Low Efficiency Dialysis, and plasmapheresis.</li>
+                <li>Attached dialyzer tubing, primed dialyzers, and initiated and terminated dialysis procedures according to treatment requirements.</li>
+                <li>Assisted with Continuous Renal Replacement Therapy setup and supported multiple modalities with nephrology and critical-care teams.</li>
+                <li>Supported hemodiafiltration procedures while monitoring patient response, machine performance, and treatment tolerance.</li>
+                <li>Assisted during internal jugular catheter insertion and supported arteriovenous fistula and femoral cannulation processes.</li>
+                <li>Monitored patients before and during treatment, identified dialysis-related complications, and reported concerns promptly.</li>
+                <li>Explained procedures calmly, reduced patient anxiety, and maintained safe, respectful, and professional bedside care.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div class="date">Oct 2016 -<br />Dec 2021</div>
+            <div>
+              <h3>Nursing Intern / Clinical Trainee</h3>
+              <p class="company">Shri Guru Ram Dass College of Nursing, Amritsar, India</p>
+              <ul>
+                <li>Completed supervised clinical training as part of the Bachelor of Science in Nursing program.</li>
+                <li>Gained exposure to adult health, community health, obstetrical, child health, mental health, research, and nursing management areas.</li>
+                <li>Strengthened patient observation, communication, documentation, bedside care, and teamwork skills in supervised clinical settings.</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <aside class="sidebar">
+        <section class="side-block">
+          <h2>Personal Info</h2>
+          <p class="info"><strong>Email</strong><a href="mailto:Singhjagmohan040@gmail.com">Singhjagmohan040@gmail.com</a></p>
+          <p class="info"><strong>Phone</strong><a href="tel:+917626052289">+91 76260 52289</a></p>
+          <p class="info"><strong>Location</strong>Ludhiana, Punjab, India</p>
+          <p class="info"><strong>Relocation</strong>Open to relocation</p>
+        </section>
+
+        <section class="side-block">
+          <h2>Clinical Skills</h2>
+          <ul class="plain-list">
+            <li>Hemodialysis setup &amp; monitoring</li>
+            <li>Sustained Low Efficiency Dialysis (SLED)</li>
+            <li>CRRT setup &amp; multi-modality support</li>
+            <li>Hemodiafiltration (HDF)</li>
+            <li>Plasmapheresis support</li>
+            <li>Dialyzer priming &amp; circuit assembly</li>
+            <li>Vascular access assistance (IJ, AV fistula, femoral)</li>
+            <li>IV therapy &amp; medication administration</li>
+            <li>Wound care &amp; aseptic technique</li>
+            <li>Patient assessment &amp; escalation</li>
+            <li>Accurate clinical documentation</li>
+          </ul>
+        </section>
+
+        <section class="side-block">
+          <h2>Registration</h2>
+          <p class="info"><strong>CRNA Licence </br>— Alberta, Canada</strong>Registration No. 156107</p>
+        </section>
+
+        <section class="side-block">
+          <h2>Languages</h2>
+          <p class="info">English — Professional Proficiency</p>
+          <p class="info">Punjabi — Native / Fluent</p>
+          <p class="info">Hindi — Fluent</p>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <main class="page page-2">
+    <header class="header">
+      <h1>Jagmohan Singh</h1>
+      <p>Skills &amp; Professional Details</p>
+    </header>
+
+    <section class="layout">
+      <section class="main">
+        <section class="section">
+          <h2 class="section-title">Core Competencies</h2>
+          <div class="simple-grid">
+            <div class="box">
+              <h3>Renal Replacement Therapy</h3>
+              <p>Expert-level proficiency in Hemodialysis, SLED, CRRT, Hemodiafiltration, and Plasmapheresis — including machine operation, circuit management, and continuous patient monitoring.</p>
+            </div>
+            <div class="box">
+              <h3>Patient Safety & Quality Care</h3>
+              <p>Complication recognition and timely escalation, strict infection-control compliance, safe medication administration, and adherence to evidence-based clinical protocols.</p>
+            </div>
+            <div class="box">
+              <h3>General & Critical Care Nsg.</h3>
+              <p>Broad general staffing competence including patient assessment, IV therapy, wound care, pre/post-procedural support, and dialysis care for ICU and high-acuity patients.</p>
+            </div>
+            <div class="box">
+              <h3>Communication & Teamwork</h3>
+              <p>Clear patient and family education, effective interdisciplinary collaboration with nephrology and critical care teams, and a calm, professional bedside manner under pressure.</p>
+            </div>
           </div>
-
-          <article class="job">
-            <h3 class="serif">Staff Nurse – Dialysis Unit</h3>
-            <p class="meta">Dayanand Medical College &amp; Hospital (DMCH) • Ludhiana, India • Jul 2022 – Nov 2024 (2+ years)</p>
-            <ul>
-              <li>Worked in a 28-bedded dialysis unit providing direct patient care during routine and advanced renal replacement therapies.</li>
-              <li>Set up and operated dialysis machines for hemodialysis, Sustained Low Efficiency Dialysis (SLED), and plasmapheresis based on patient treatment needs.</li>
-              <li>Attached dialyzer tubing, primed dialyzers with saline or heparinized solution, and independently initiated and terminated dialysis procedures.</li>
-              <li>Assisted with CRRT setup and supported different CRRT modalities in coordination with nephrology and critical care teams.</li>
-              <li>Independently initiated and terminated hemodiafiltration procedures while closely observing patient response and machine performance.</li>
-              <li>Assisted the Nephrologist during internal jugular vein catheter insertion procedures and supported AV fistula and femoral cannulation processes.</li>
-              <li>Assessed complications during dialysis, monitored patients before and during treatment, and reported clinical concerns promptly for timely intervention.</li>
-              <li>Helped reduce patient anxiety by explaining procedures, maintaining a calm environment, and supporting safe, respectful care.</li>
-            </ul>
-          </article>
-
-          <article class="job secondary">
-            <h3 class="serif">Nursing Intern / Clinical Trainee</h3>
-            <p class="meta">Shri Guru Ram Dass College of Nursing • Amritsar, India • Oct 2016 – Dec 2021</p>
-            <ul>
-              <li>Completed a four-year B.Sc. Nursing program, including internship, with English as the medium of instruction.</li>
-              <li>Built a foundation in adult health nursing, community health nursing, midwifery and obstetrical nursing, child health nursing, mental health nursing, nursing research, and nursing management.</li>
-              <li>Strengthened clinical communication, patient observation, documentation, and basic nursing care skills in supervised practice settings.</li>
-              <li>Graduated after successful completion of University Examinations conducted by Baba Farid University of Health Sciences, Faridkot.</li>
-            </ul>
-          </article>
         </section>
 
-        <section class="bottom-grid">
-          <article class="card dark">
-            <p class="eyebrow">Education</p>
-            <h3 class="serif">Bachelor of Science in Nursing</h3>
-            <p style="margin-top: 10px;">Shri Guru Ram Dass College of Nursing, Sri Amritsar<br />Affiliated with Baba Farid University of Health Sciences, Faridkot<br />Course period: Oct 2016 – Dec 2021<br />Degree conferred: Jan 2022</p>
-          </article>
-          <article class="card tan">
-            <p class="eyebrow">Additional Information</p>
-            <ul>
-              <li>Date of birth: 28 June 1996</li>
-              <li>Medium of instruction: English</li>
-              <li>Address for records: Patti Multani, PO Tihara, Tehsil Jagraon, District Ludhiana, Punjab, India 142033</li>
-              <li>Best suited for Dialysis Nurse, renal care assistant, patient care, and clinical support roles</li>
-              <li>References available upon request</li>
-            </ul>
-          </article>
+        <section class="section">
+          <h2 class="section-title">Technical Nursing Skills</h2>
+          <ul class="two-col-list">
+            <li>Dialysis machine setup &amp; calibration</li>
+            <li>Dialyzer tubing assembly</li>
+            <li>Circuit priming &amp; blood-line preparation</li>
+            <li>Heparinized &amp; saline solution management</li>
+            <li>Dialysis initiation &amp; safe termination</li>
+            <li>CRRT setup &amp; multi-modality support</li>
+            <li>Hemodiafiltration (HDF) assistance</li>
+            <li>AV fistula cannulation support</li>
+            <li>Femoral vein access support</li>
+            <li>Internal jugular catheter assistance</li>
+            <li>Pre-treatment patient assessment</li>
+            <li>Intra-treatment hemodynamic monitoring</li>
+            <li>IV therapy &amp; medication administration</li>
+            <li>Wound care &amp; aseptic dressing</li>
+            <li>Complication recognition &amp; escalation</li>
+            <li>Clinical documentation &amp; handover reporting</li>
+          </ul>
         </section>
 
-        <footer class="closing">
-          <p>Thank you for reviewing my resume. I would welcome the opportunity to contribute my dialysis nursing experience, patient-centred approach, and commitment to safe care to a healthcare team in Canada.</p>
-          <a class="button" href="mailto:Singhjagmohan040@gmail.com">Contact Candidate</a>
-        </footer>
-      </main>
-    </div>
-  </div>
-  <script>
-    (function () {
-      const root = document.documentElement;
-      const sheetWidth = 1122;
-      const sheetHeight = 1587;
-      const sidePadding = 32;
+        <section class="section">
+          <h2 class="section-title">Professional Strengths</h2>
+          <ul class="two-col-list">
+            <li>Patient-centred approach</li>
+            <li>Calm under clinical pressure</li>
+            <li>Strong team collaboration</li>
+            <li>Clear, respectful communication</li>
+            <li>Reliability &amp; punctuality</li>
+            <li>Organised &amp; detail-oriented</li>
+            <li>Evidence-based practice</li>
+            <li>Safe practice mindset</li>
+            <li>Adaptable across clinical units</li>
+            <li>Confidentiality &amp; professionalism</li>
+            <li>Cultural sensitivity</li>
+            <li>Continuous learning &amp; improvement</li>
+          </ul>
+        </section>
 
-      function resizeSheet() {
-        const availableWidth = Math.max(320, window.innerWidth - sidePadding);
-        const scale = Math.min(1, availableWidth / sheetWidth);
-        root.style.setProperty('--sheet-scale', scale.toFixed(4));
+        <section class="section">
+          <h2 class="section-title">Suitable Positions</h2>
+          <ul class="two-col-list">
+            <li>Dialysis / Renal Care Nurse</li>
+            <li>Registered Nurse — General Staffing</li>
+            <li>Medical-Surgical Staff Nurse</li>
+            <li>Critical Care Support Nurse</li>
+            <li>Nephrology Unit Nurse</li>
+            <li>Float / Relief Nurse</li>
+            <li>Clinical Support Nurse</li>
+            <li>Acute Care Nurse</li>
+          </ul>
+        </section>
 
-        const frame = document.getElementById('sheetFrame');
-        frame.style.width = `${sheetWidth * scale}px`;
-        frame.style.height = `${sheetHeight * scale}px`;
-      }
+        <section class="section">
+          <h2 class="section-title">References</h2>
+          <p class="summary">Available on- <a href="mailto:Singhjagmohan040@gmail.com">Singhjagmohan040@gmail.com</a></p>
+        </section>
+      </section>
 
-      resizeSheet();
-      window.addEventListener('resize', resizeSheet, { passive: true });
-      window.addEventListener('orientationchange', resizeSheet, { passive: true });
-    })();
-  </script>
+      <aside class="sidebar">
+        <section class="side-block">
+          <h2>Personal Info</h2>
+          <p class="info"><strong>Email</strong><a href="mailto:Singhjagmohan040@gmail.com">Singhjagmohan040@gmail.com</a></p>
+          <p class="info"><strong>Phone</strong><a href="tel:+917626052289">+91 76260 52289</a></p>
+          <p class="info"><strong>Location</strong>Ludhiana, Punjab, India</p>
+          <p class="info"><strong>Relocation</strong>Open to relocation</p>
+        </section>
+
+        <section class="side-block">
+          <h2>Work Values</h2>
+          <ul class="plain-list">
+             <li>Compassionate &amp; empathetic</li>
+            <li>Dependable &amp; punctual</li>
+            <li>Organised &amp; thorough</li>
+            <li>Ethically grounded</li>
+            <li>Team-focused</li>
+            <li>Patient-centred always</li>
+            <li>Safety-first mindset</li>
+            <li>Committed to growth</li>
+          </ul>
+        </section>
+
+        <section class="side-block">
+          <h2>Availability</h2>
+          <p class="info">Available for full-time, contract, and casual/relief positions. Open to day, evening, and night shifts across acute, dialysis, and general care settings.</p>
+        </section>
+
+        <section class="side-block">
+          <h2>Record Address</h2>
+          <p class="info">Patti Multani, PO Tihara, Tehsil Jagraon, District Ludhiana, Punjab, India 142033</p>
+        </section>
+      </aside>
+    </section>
+  </main>
+
 </body>
 </html>
